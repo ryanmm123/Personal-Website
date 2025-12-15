@@ -1,0 +1,30 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./ProjectSourceCode/server.js",
+    "dev": "nodemon ./ProjectSourceCode/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanmm123/Personal-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ryanmm123/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/ryanmm123/Personal-Website#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
