@@ -3,6 +3,7 @@
     grid-template-columns: repeat(24, 1fr);
     gap: 10px;
     padding: 5px;
+
 }
 
 .item-carousel {
@@ -45,14 +46,14 @@
 @media (max-width: 2500px) {
     .item-carousel {
         grid-column: 1 / -1;
-        grid-row: 15;
+        grid-row: 6;
         width: 100%;
         max-width: 100%;
     }
 
     .item-text {
         grid-column: 1 / -1;
-        grid-row: 16;
+        grid-row: 7;
 
         width: 100%;
         max-width: 50%;
@@ -60,29 +61,80 @@
 
         display: flex;
         justify-content: center;
-        /* horizontal */
         align-items: center;
-        /* vertical */
 
         text-align: center;
         min-height: 100%;
     }
 }
 
-
-
 @media (max-width: 768px) {
     .item-carousel {
         grid-column: 1 / -1;
-        grid-row: 15;
+        grid-row: 8;
         width: 100%;
         max-width: 100%;
     }
 
     .item-text {
         grid-column: 1 / -1;
-        grid-row: 16;
+        grid-row: 9;
         width: 100%;
         max-width: 100%;
     }
+}
+
+.item-card1 {
+    grid-column: 8 / 12;
+    grid-row: 10;
+    height: 450px;
+
+    width: 100%;
+    max-width: 40vw;
+
+    aspect-ratio: 1 / 1;
+}
+
+.item-card2 {
+    grid-column: 13 / 13;
+    grid-row: 10;
+    height: 400px;
+
+    width: 100%;
+    max-width: 40vw;
+
+    aspect-ratio: 1 / 1;
+}
+
+.item-card3 {
+    grid-column: 15 / 18;
+    grid-row: 10;
+    height: 350px;
+
+    width: 100%;
+    max-width: 40vw;
+
+    aspect-ratio: 1 / 1;
+}
+
+.item-acc {
+    grid-column: 8 / 18;
+    grid-row: 5;
+
+    height: auto;
+    max-width: 40vw;
+    width: 100%;
+
+    aspect-ratio: auto;
+    align-self: start;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #d4af37;
+    color: #000;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.4);
 }
