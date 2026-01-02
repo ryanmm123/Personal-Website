@@ -18,6 +18,8 @@ const PORT = process.env.PORT || 5000;
 app.use(express.urlencoded({ extended: false }));
 
 const db = new sqlite3.Database(path.join(__dirname, 'contact.db'), (err) => {
+    console.log("DB FILE PATH:", path.resolve('contacts.db'));
+
     if (err) console.error("DB open error:", err);
     else console.log("Connected to SQLite DB");
 });

@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/ryanmm123/Personal-Website#readme",
   "dependencies": {
-    "better-sqlite3": "^12.5.0",
     "express": "^5.2.1",
     "express-handlebars": "^8.0.4",
     "sqlite3": "^5.1.7"
