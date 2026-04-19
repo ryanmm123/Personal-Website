@@ -1,22 +1,56 @@
-.grid {
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    gap: 10px;
-    padding: 5px;
+:root {
+    --site-font-family: Georgia, "Times New Roman", Times, serif;
+}
 
+body {
+    font-family: var(--site-font-family);
+    color: #111111;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+input,
+textarea,
+select,
+.nav-link,
+.accordion-button,
+.input-group-text,
+.form-control,
+.btn,
+.card-text {
+    font-family: inherit;
+}
+
+.grid {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+#about .grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 420px) minmax(320px, 1fr);
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem 0;
 }
 
 .item-carousel {
-    grid-column: 10 / 11;
-    grid-row: 15;
-    height: 350px;
-
     width: 100%;
-    max-width: 40vw;
-
+    height: auto;
     aspect-ratio: 1 / 1;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+    background: #f5f5f5;
 }
-
 
 .item-carousel .carousel-inner,
 .item-carousel .carousel-item {
@@ -27,155 +61,129 @@
 .item-carousel img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
 }
 
 .item-text {
-    grid-column: 11/ 16;
-    grid-row: 15;
-
-    min-width: 0;
     width: 100%;
-
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    font-family: "Times New Roman";
-    line-height: 1.4;
+    min-height: 500px;
+    padding: 1.75rem;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+    font-size: clamp(0.95rem, 1.05vw, 1.05rem);
+    line-height: 1.55;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-@media (max-width: 2500px) {
-    .item-carousel {
-        grid-column: 1 / -1;
-        grid-row: 6;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .item-text {
-        grid-column: 1 / -1;
-        grid-row: 7;
-
-        width: 100%;
-        max-width: 50%;
-        margin: 0 auto;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        text-align: center;
-        min-height: 100%;
-    }
+.item-text p {
+    margin-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
-    .item-carousel {
-        grid-column: 1 / -1;
-        grid-row: 8;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .item-text {
-        grid-column: 1 / -1;
-        grid-row: 9;
-        width: 100%;
-        max-width: 100%;
-    }
+.item-text p:last-child {
+    margin-bottom: 0;
 }
 
-.item-card1 {
-    grid-column: 9 / 11;
-    grid-row: 10;
-    height: 450px;
-
-    width: 100%;
-    max-width: 40vw;
-
-    aspect-ratio: 1 / 1;
+#projects .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+    justify-content: center;
+    gap: 1.75rem;
+    padding: 2rem 0;
 }
 
-.item-card2 {
-    grid-column: 12/13;
-    grid-row: 10;
-    height: 400px;
-
-    width: 100%;
-    max-width: 40vw;
-
-    aspect-ratio: 1 / 1;
-}
-
+.item-card1,
+.item-card2,
 .item-card3 {
-    grid-column: 14 / 18;
-    grid-row: 10;
-    height: 350px;
+    width: min(100%, 320px) !important;
+    max-width: none;
+    height: 100%;
+    min-height: 420px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #d9d9d9;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
 
+.item-card1 img,
+.item-card2 img,
+.item-card3 img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.item-card1 img {
+    object-fit: contain;
+    background: #ffffff;
+    padding: 0.75rem;
+}
+
+#interests .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+    justify-content: center;
+    gap: 1.75rem;
+    padding: 2rem 0;
+}
+
+.interest-card {
+    width: min(100%, 320px);
+    min-height: 430px;
+    margin: 0 auto;
+    border: 1px solid #d9d9d9;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+
+.interest-card-body {
+    padding: 1.5rem 1.5rem 1rem;
+    flex: 1 1 auto;
+}
+
+.interest-card-title {
+    margin-bottom: 0.75rem;
+}
+
+.interest-card .card-text {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.interest-card-image {
     width: 100%;
-    max-width: 40vw;
-
-    aspect-ratio: 1 / 1;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    margin-top: auto;
+    object-position: center center;
 }
 
-@media (max-width: 1000px) {
-    .item-card1 {
-        grid-column: 12 / 14;
-        grid-row: 8;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .item-card2 {
-        grid-column: 12 / 14;
-        grid-row: 9;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .item-card3 {
-        grid-column: 12 / 14;
-        grid-row: 10;
-        width: 100%;
-        max-width: 100%;
-    }
+.interest-skiing-image {
+    object-position: center 42%;
 }
 
-.item-acc {
-    grid-column: 9 / 17;
-    grid-row: 5;
-
-    height: auto;
-    max-width: 40vw;
-    width: 100%;
-
-    aspect-ratio: auto;
-    align-self: start;
+.interest-golf-image {
+    object-position: center 28%;
 }
 
-.accordion-button:not(.collapsed) {
-    background-color: #d4af37;
-    color: #000;
-    box-shadow: none;
+.interest-projects-image {
+    object-position: center 38%;
 }
 
-.accordion-button:focus {
-    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.4);
-}
-
-@media (max-width: 1000px) {
-    .item-acc {
-        grid-column: 8 / 14;
-        grid-row: 5;
-        width: 100%;
-        max-width: 100%;
-    }
+#resume .grid {
+    padding: 2rem 0;
 }
 
 .item-resume {
-    grid-column: 7 / 19;
-    grid-row: 4;
-    width: 100%;
-    max-width: 100%;
+    width: min(100%, 980px);
+    margin: 0 auto;
     min-height: 420px;
     border: 1px solid #d9d9d9;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
@@ -187,7 +195,6 @@
 
 .resume-title {
     margin-bottom: 1rem;
-    font-family: "Times New Roman";
 }
 
 .resume-text {
@@ -209,23 +216,73 @@
     display: block;
 }
 
+#contact .grid {
+    padding: 2rem 0;
+}
+
+.item-acc {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    align-self: start;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #d4af37;
+    color: #000;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.4);
+}
+
+@media (max-width: 900px) {
+    #about .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item-carousel {
+        max-width: 460px;
+        margin: 0 auto;
+    }
+
+    .item-text {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
+    .grid {
+        width: min(100%, calc(100% - 1.25rem));
+    }
+
+    #projects .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item-card1,
+    .item-card2,
+    .item-card3,
+    .item-carousel {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    .resume-body {
+        padding: 1.25rem;
+    }
+
+    .interest-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .resume-frame-wrapper {
         min-height: 500px;
     }
 
     .resume-frame {
         height: 500px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .item-resume {
-        grid-column: 2 / 24;
-        grid-row: 4;
-    }
-
-    .resume-body {
-        padding: 1.25rem;
     }
 }
