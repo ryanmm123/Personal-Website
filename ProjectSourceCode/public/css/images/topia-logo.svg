@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+  <title id="title">Topia logo</title>
+  <desc id="desc">Dark teal square with white Topia wordmark.</desc>
+  <rect width="200" height="200" fill="#04384c"/>
+  <g fill="#ffffff">
+    <rect x="47" y="55" width="62" height="13"/>
+    <rect x="88" y="55" width="19" height="54"/>
+    <circle cx="128" cy="59" r="21"/>
+    <circle cx="128" cy="59" r="9" fill="#04384c"/>
+  </g>
+  <text x="100" y="154" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="45" font-weight="800" text-anchor="middle" letter-spacing="1">TOPIA</text>
+</svg>
